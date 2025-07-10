@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+
+import math
+
+def agradece():
+    print('\n******Obrigado por usar minha simples calculadora****** ')
+
+
+while True:
+   
+    print ('\n ********************* CALCULADORA EM PYTHON*************************')
+    print ('\n Selecione o número da Operação Desejada')
+    print ('\n 1 - Soma \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão')
+    
+    operacao = int(input('\n Digite sua opção aqui (1/2/3/4): '))
+    
+    if operacao not in [1,2,3,4]:
+        print('\n Erro: Digite apenas 1, 2 ,3 ou 4')
+        continue
+
+    num1 = float(input('\n Digite o 1º Número: '))
+    num2 = float(input('\n Digite o 2º Numero: '))
+
+    if operacao == 1:
+        soma = num1 + num2
+        print ('\n O resultado da Soma entre', num1 , '+',  num2,  'é igual a: ', soma)
+        agradece()
+                          
+    elif operacao == 2:
+        subtracao = num1 - num2
+        print ('\n O resultado da Subtração entre', num1, '-', num2, 'é igual a: ', subtracao)
+        agradece()
+        
+
+    elif operacao == 3:
+        multiplicacao = num1 * num2
+        print ('\n O resultado da Multiplicação entre', num1, '*', num2, 'é igual a: ', multiplicacao)
+        agradece()
+        
+
+    elif operacao == 4:
+        if num2 == 0:
+            print('\nErro: Divisão por ZERO não é permitida!')
+        else:
+            divisao = num1 / num2
+            print ('\n O resultado da divisão entre', num1, '/', num2, 'é igual a: ', divisao)
+            agradece()
+     
